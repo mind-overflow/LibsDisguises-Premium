@@ -11,7 +11,6 @@ import com.mojang.authlib.Agent;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.ProfileLookupCallback;
 import com.mojang.authlib.minecraft.MinecraftSessionService;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import me.libraryaddict.disguise.utilities.reflection.ReflectionManagerAbstract;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
@@ -201,7 +200,7 @@ public class ReflectionManager implements ReflectionManagerAbstract {
         ServerLevel world = ((CraftWorld) target.getWorld()).getHandle();
         ServerChunkCache chunkSource = world.getChunkSource();
         ChunkMap chunkMap = chunkSource.chunkMap;
-        Int2ObjectMap<ChunkMap.TrackedEntity> entityMap = chunkMap.entityMap;
+        Map<Integer, ChunkMap.TrackedEntity> entityMap = chunkMap.entityMap;
         ChunkMap.TrackedEntity trackedEntity = entityMap.get(target.getEntityId());
         if (trackedEntity == null) {
             return null;
