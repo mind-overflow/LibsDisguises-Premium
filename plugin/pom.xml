@@ -136,6 +136,12 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.mojang</groupId>
+            <artifactId>authlib</artifactId>
+            <version>3.2.37</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- testing -->
         <dependency>
             <groupId>junit</groupId>

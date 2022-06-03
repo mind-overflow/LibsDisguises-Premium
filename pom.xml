@@ -53,6 +53,12 @@
                 <version>${spigot.version}</version>
                 <optional>true</optional>
             </dependency>
+            <dependency>
+                <groupId>com.mojang</groupId>
+                <artifactId>authlib</artifactId>
+                <version>3.2.37</version>
+                <scope>provided</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -70,6 +76,11 @@
         <repository>
             <id>papermc</id>
             <url>https://papermc.io/repo/repository/maven-public/</url>
+        </repository>
+
+        <repository>
+            <id>velocity</id>
+            <url>https://nexus.velocitypowered.com/repository/maven-public/</url>
         </repository>
 
         <!-- Lumine is a repo hosted by the creators of MythicCraft -->
